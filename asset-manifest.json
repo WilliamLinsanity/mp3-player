@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/WilliamLinsanity/mp3-player.git/static/css/main.9bfd57c8.chunk.css",
+    "main.js": "/WilliamLinsanity/mp3-player.git/static/js/main.6c267002.chunk.js",
+    "main.js.map": "/WilliamLinsanity/mp3-player.git/static/js/main.6c267002.chunk.js.map",
+    "runtime-main.js": "/WilliamLinsanity/mp3-player.git/static/js/runtime-main.c4f33b56.js",
+    "runtime-main.js.map": "/WilliamLinsanity/mp3-player.git/static/js/runtime-main.c4f33b56.js.map",
+    "static/js/2.90ed928e.chunk.js": "/WilliamLinsanity/mp3-player.git/static/js/2.90ed928e.chunk.js",
+    "static/js/2.90ed928e.chunk.js.map": "/WilliamLinsanity/mp3-player.git/static/js/2.90ed928e.chunk.js.map",
+    "static/js/3.4f3cb286.chunk.js": "/WilliamLinsanity/mp3-player.git/static/js/3.4f3cb286.chunk.js",
+    "static/js/3.4f3cb286.chunk.js.map": "/WilliamLinsanity/mp3-player.git/static/js/3.4f3cb286.chunk.js.map",
+    "index.html": "/WilliamLinsanity/mp3-player.git/index.html",
+    "static/css/main.9bfd57c8.chunk.css.map": "/WilliamLinsanity/mp3-player.git/static/css/main.9bfd57c8.chunk.css.map",
+    "static/js/2.90ed928e.chunk.js.LICENSE.txt": "/WilliamLinsanity/mp3-player.git/static/js/2.90ed928e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c4f33b56.js",
+    "static/js/2.90ed928e.chunk.js",
+    "static/css/main.9bfd57c8.chunk.css",
+    "static/js/main.6c267002.chunk.js"
+  ]
+}
