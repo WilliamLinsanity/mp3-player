@@ -2,7 +2,7 @@
   "name": "music",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://github.com/WilliamLinsanity/mp3-player.git",
+  "homepage":"https://WilliamLinsanity.github.io/mp3-player",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@emotion/react": "^11.4.0",
