@@ -37,15 +37,12 @@ const MusiceApp = () => {
       client_id: '9fab72c6f355b2e77e22a569bb669266',
       client_secret: 'a52879fecbd32b8562a9eecd05615b31',
     };
-    return fetch('/account', {
+    return fetch('https://music-express1.herokuapp.com/login', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: encodeData(details),
     })
       .then((res) => res.json())
       .then((res) => {
+        console.log(res);
         localStorage.setItem('token', res.access_token);
       })
 
@@ -53,7 +50,7 @@ const MusiceApp = () => {
   };
 
   const handleChartsData = () => {
-    return fetch(`/kkboxApi/charts?${encodeData(parameters)}`, {
+    return fetch(`https://api.kkbox.com/v1.1/charts?${encodeData(parameters)}`, {
       headers: myHeaders,
     })
       .then((res) => res.json())
@@ -64,7 +61,7 @@ const MusiceApp = () => {
   };
 
   const getPlayListInfo = (chartsList) => {
-    return fetch(`/kkboxApi/charts/${chartsList[0].id}?${encodeData(parameters)}`, {
+    return fetch(`https://api.kkbox.com/v1.1/charts/${chartsList[0].id}?${encodeData(parameters)}`, {
       headers: myHeaders,
     })
       .then((res) => res.json())
