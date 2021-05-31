@@ -137,6 +137,7 @@ const MainFrame = (props) => {
       songIndex: 0,
       method: 'init',
     });
+
     if (tracks) {
       handleSearch(tracks.data[0].name);
       setSongInfo({
@@ -166,7 +167,7 @@ const MainFrame = (props) => {
       part: 'snippet',
       q: songName,
     };
-    return fetch(`youtubeApi/search?${encodeData(details)}`)
+    return fetch(`https://www.googleapis.com/youtube/v3/search?${encodeData(details)}`)
       .then((res) => res.json())
       .then((res) => {
         setVideoId(res.items[0].id.videoId);
@@ -190,10 +191,17 @@ const MainFrame = (props) => {
         duration: transTime(player.getDuration()),
         currentTime: transTime(player.getCurrentTime()),
       });
-      setBarPercentage((prev) => ({
-        volume: prev.volume,
-        progress: `${roundDecimal(percentage, 2)}%`,
-      }));
+      if (percentage) {
+        setBarPercentage((prev) => ({
+          volume: prev.volume,
+          progress: `${roundDecimal(percentage, 2)}%`,
+        }));
+      } else {
+        setBarPercentage((prev) => ({
+          volume: prev.volume,
+          progress: '0%',
+        }));
+      }
     }, 1000);
   };
 
@@ -298,8 +306,8 @@ const MainFrame = (props) => {
     } else if (!event.target.getPlayerState()) {
       // 接續下一首播放
       setNowPlayingSong({
-        ...nowPlayingSong,
         songIndex: nowPlayingSong.songIndex + 1,
+        method: 'change',
       });
       handleSearch(tracks.data[nowPlayingSong.songIndex + 1].name);
     } else {
