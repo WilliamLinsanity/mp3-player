@@ -162,7 +162,6 @@ const MainFrame = (props) => {
   };
 
   const handleSearch = (songName) => {
-    console.log(process.env.REACT_APP_KEY);
     const details = {
       key: process.env.REACT_APP_KEY,
       part: 'snippet',
