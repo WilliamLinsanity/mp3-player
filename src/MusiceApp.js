@@ -32,9 +32,7 @@ const MusiceApp = () => {
   }, []);
 
   const handleLogin = () => {
-    return fetch('https://music-express1.herokuapp.com/login', {
-      method: 'POST',
-    })
+    return fetch('https://music-express1.herokuapp.com', {})
       .then((res) => res.json())
       .then((res) => {
         localStorage.setItem('token', res.access_token);
