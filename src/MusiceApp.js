@@ -32,17 +32,11 @@ const MusiceApp = () => {
   }, []);
 
   const handleLogin = () => {
-    const details = {
-      grant_type: 'client_credentials',
-      client_id: '9fab72c6f355b2e77e22a569bb669266',
-      client_secret: 'a52879fecbd32b8562a9eecd05615b31',
-    };
     return fetch('https://music-express1.herokuapp.com/login', {
       method: 'POST',
     })
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
         localStorage.setItem('token', res.access_token);
       })
 
